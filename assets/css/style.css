@@ -958,14 +958,14 @@ input:focus::placeholder, input:hover::placeholder {
      object-fit: cover;
 }
 
-.post-item__text {
+.post-item__texxt {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
   padding: 20px;
 }
 
-.post-item__text h3 {
+.post-item__texxt h3 {
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
@@ -973,7 +973,7 @@ input:focus::placeholder, input:hover::placeholder {
   font-family: "Roboto Slab", serif;
 }
 
-.post-item__text p {
+.post-item__texxt p {
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
