@@ -1,5 +1,5 @@
 .footer {
-  padding: 50px 20px 70px;
+  padding: ($gap * 2.5) $gap ($gap * 3.5);
   text-align: center;
   background-color: $color-primary;
   letter-spacing: 0;
@@ -12,12 +12,12 @@
     position: relative;
     display: grid;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: $gap * 2;
     grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
 
     & a {
       display: block;
-      padding: 10px;
+      padding: $gap / 2;
       transition: color 0.5s;
 
       &:hover,
@@ -32,7 +32,7 @@
 
     &::after {
       position: absolute;
-      bottom: -20px;
+      bottom: -$gap;
       left: calc(50% - 75px / 2);
       width: 75px;
       height: 2px;

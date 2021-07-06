@@ -44,20 +44,25 @@ h2 {
   color: $color-primary;
 
   @include lg-min {
-    margin: 0 0 56px 0;
+    margin-bottom: 3rem;
+
     font-size: 2.5rem;
   }
   @include lg-md {
-    margin: 0 0 42px 0;
+    margin-bottom: 2.625rem;
+
     font-size: 2rem;
   }
   @include md-sm {
-    margin: 0 0 36px 0;
+    margin-bottom: 2.25rem;
+
     font-size: 1.5rem;
   }
   @include sm {
+    margin-bottom: 2.25rem;
+
     text-align: center;
-    margin: 0 0 36px 0;
+
     font-size: 1.5rem;
   }
 }
@@ -79,32 +84,48 @@ a {
   align-items: center;
   justify-content: center;
 
+  height: 60px;
+
   padding-right: 1em;
   padding-left: 1em;
 
   transition: background-color 0.5s;
   letter-spacing: 0.1em;
+
+  border-width: 2px;
+  border-style: solid;
+
+  font-size: 1.125rem;
 }
 
 .btn--light {
-  border: 2px solid $color-light;
+  border-color: $color-light;
   background-color: rgba($color-light, 0.1);
 
   @include lg-min {
     min-width: 250px;
-    height: 60px;
-    font-size: 1.125rem;
   }
-
   @include lg-md {
     min-width: 200px;
     height: 50px;
 
     font-size: 1rem;
   }
-  @include md {
+  @include md-sm {
     min-width: 170px;
     height: 40px;
+
+    letter-spacing: 0.05em;
+
+    font-size: 1rem;
+  }
+  @include sm {
+    min-width: 170px;
+    height: 40px;
+
+    letter-spacing: 0.05em;
+
+    font-size: 1rem;
   }
 }
 
