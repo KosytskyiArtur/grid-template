@@ -1,13 +1,5 @@
 .posts {
-  @include lg-min {
-    padding: $gap * 5 0;
-  }
-  @include lg-md {
-    padding: 8$gap * 4 0;
-  }
-  @include md {
-    padding: $gap * 3 0;
-  }
+  @extend %section;
 
   &__container {
     @extend %container;

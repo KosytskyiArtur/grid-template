@@ -355,6 +355,10 @@ template {
   padding-left: 20px;
 }
 
+.about h2, .posts h2 {
+  margin-top: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -379,9 +383,6 @@ h1 {
 }
 
 h2 {
-  -webkit-margin-before: 0px;
-          margin-block-start: 0px;
-  margin-top: 0px;
   font-family: "Roboto Slab", serif;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -751,18 +752,12 @@ a {
 }
 
 .about {
-  background-color: #e5e5e5;
   letter-spacing: 0.055em;
+  background-color: #e5e5e5;
 }
 
 .about__container {
   display: grid;
-}
-
-.about__content p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #637588;
 }
 
 .about__content p:first-of-type {
@@ -785,9 +780,9 @@ a {
 
 .about__image {
   display: grid;
-  justify-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  justify-items: center;
 }
 
 .about__image img {
@@ -1109,6 +1104,10 @@ a {
 }
 
 @media (min-width: 992px) {
+  .about, .posts {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
   h1 {
     font-size: 3.75rem;
   }
@@ -1127,22 +1126,15 @@ a {
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
     grid-template-columns: repeat(4, 1fr);
   }
-  .about {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
   .about__container {
-    grid-template-columns: 1fr 271px;
     gap: 100px;
+    grid-template-columns: 1fr 271px;
   }
   .about__content p {
     font-size: 1.125rem;
   }
   .about__content p:first-of-type::after {
     right: -50px;
-  }
-  .posts {
-    padding: 100px 0;
   }
   .posts__grid {
     grid-template-areas: "p1 p1 p2 p3" "p4 p5 p6 p6";
@@ -1151,6 +1143,10 @@ a {
 }
 
 @media (max-width: 991.8px) and (min-width: 768px) {
+  .about, .posts {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
   h1 {
     font-size: 2.5rem;
   }
@@ -1171,19 +1167,12 @@ a {
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
     grid-template-columns: repeat(3, 1fr);
   }
-  .about {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
   .about__container {
-    grid-template-columns: 1fr 271px;
     gap: 40px;
+    grid-template-columns: 1fr 271px;
   }
   .about__content p:first-of-type::after {
     right: -20px;
-  }
-  .posts {
-    padding: 8 80px 0;
   }
   .posts__grid {
     grid-template-areas: "p1 p1 p2" "p3 p4 p4" "p5 p5 p6";
@@ -1192,6 +1181,10 @@ a {
 }
 
 @media (max-width: 767.8px) {
+  .about, .posts {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   h1 {
     font-size: 1.875rem;
   }
@@ -1222,13 +1215,6 @@ a {
   .skill-item__title {
     font-size: 1.125rem;
   }
-  .about {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .posts {
-    padding: 60px 0;
-  }
 }
 
 @media (max-width: 767.8px) and (min-width: 576px) {
@@ -1248,8 +1234,8 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
   .about__container {
-    grid-template-columns: 1fr 236px;
     gap: 20px;
+    grid-template-columns: 1fr 236px;
   }
   .about__content p:first-of-type::after {
     right: -10px;
@@ -1305,8 +1291,8 @@ a {
     width: 100%;
   }
   .about__container {
-    grid-template-columns: 1fr;
     gap: 20px;
+    grid-template-columns: 1fr;
   }
   .about__content p:first-of-type::after {
     display: none;
