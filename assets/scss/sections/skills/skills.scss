@@ -1,8 +1,8 @@
 .skills {
   margin-bottom: $gap * 1.5;
-  padding: $gap / 2;
+  padding: $gap /2;
 
-  @media (max-width: sm) {
+  @include sm {
     margin-bottom: 0;
     padding: $gap;
   }

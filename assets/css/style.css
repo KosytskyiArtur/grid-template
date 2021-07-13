@@ -1272,6 +1272,10 @@ input:focus {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .skills {
+    margin-bottom: 0;
+    padding: 20px;
+  }
   .skills__container {
     gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
@@ -1287,12 +1291,5 @@ input:focus {
   .posts__grid {
     grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: sm) {
-  .skills {
-    margin-bottom: 0;
-    padding: 20px;
   }
 }
