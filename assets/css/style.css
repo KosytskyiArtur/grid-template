@@ -401,6 +401,14 @@ a {
   color: #ffffff;
 }
 
+p {
+  color: #637588;
+}
+
+input:focus {
+  outline: none;
+}
+
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -412,15 +420,17 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   height: 60px;
-  padding-right: 1em;
-  padding-left: 1em;
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s, border-color 0.5s;
+  -o-transition: background-color 0.5s, border-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 0.1em;
   border-width: 2px;
   border-style: solid;
   font-size: 1.125rem;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #d66926;
 }
 
 .btn--light {
@@ -429,15 +439,8 @@ a {
 }
 
 .btn--primary {
-  height: 60px;
-  border: 2px solid #2d3651;
+  border-color: #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
-  font-size: 1.125rem;
-}
-
-.btn:hover,
-.btn:focus {
-  background-color: #d66926;
 }
 
 .header {
@@ -643,9 +646,9 @@ a {
 }
 
 .skill-item:hover .skill-item__image {
-  -webkit-transform: scale(1.5);
-      -ms-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .skill-item:hover .skill-item__link {
@@ -662,11 +665,11 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  -webkit-transition: -webkit-transform 25s;
-  transition: -webkit-transform 25s;
-  -o-transition: transform 25s;
-  transition: transform 25s;
-  transition: transform 25s, -webkit-transform 25s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   background-color: #2d3651;
   background-image: url(../img/no-image.png);
   background-position: center;
@@ -697,9 +700,9 @@ a {
           justify-content: center;
   height: 100%;
   padding: 20px;
-  -webkit-transition: color 0.25s;
-  -o-transition: color 0.25s;
-  transition: color 0.25s;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 .skill-item__overlay {
@@ -708,9 +711,9 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  -webkit-transition: opacity 0.25s;
-  -o-transition: opacity 0.25s;
-  transition: opacity 0.25s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
   opacity: 0.8;
   background-color: #2d3651;
 }
@@ -822,7 +825,8 @@ a {
   display: block;
   width: 100%;
   height: 60px;
-  padding: 0 30px;
+  padding-right: 30px;
+  padding-left: 30px;
   -webkit-transition: background-color 0.5s, border-color 0.5s;
   -o-transition: background-color 0.5s, border-color 0.5s;
   transition: background-color 0.5s, border-color 0.5s;
@@ -1043,10 +1047,7 @@ a {
 }
 
 @media (min-width: 576px) {
-  .btn--primary {
-    min-width: 300px;
-  }
-  .skills__actions {
+  .skills__actions, .posts__actions {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1054,18 +1055,7 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .skills__actions .btn--primary {
-    min-width: 350px;
-  }
-  .posts__actions {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .posts__actions .btn--primary {
+  .skills__actions .btn--primary, .posts__actions .btn--primary {
     min-width: 350px;
   }
 }
@@ -1259,6 +1249,9 @@ a {
 }
 
 @media (max-width: 575.8px) {
+  .skills__actions .btn--primary, .posts__actions .btn--primary {
+    width: 100%;
+  }
   h2 {
     margin-bottom: 2.25rem;
     text-align: center;
@@ -1269,9 +1262,6 @@ a {
     height: 40px;
     letter-spacing: 0.05em;
     font-size: 1rem;
-  }
-  .btn--primary {
-    width: 100%;
   }
   .header-content__actions {
     -webkit-box-align: center;
@@ -1287,9 +1277,6 @@ a {
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     grid-template-columns: 1fr;
   }
-  .skills__actions .btn--primary {
-    width: 100%;
-  }
   .about__container {
     gap: 20px;
     grid-template-columns: 1fr;
@@ -1300,9 +1287,6 @@ a {
   .posts__grid {
     grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
     grid-template-columns: 1fr;
-  }
-  .posts__actions .btn--primary {
-    width: 100%;
   }
 }
 

@@ -79,6 +79,14 @@ a {
   color: $color-light;
 }
 
+p {
+  color: $color-gray;
+}
+
+input:focus {
+  outline: none;
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -86,16 +94,18 @@ a {
 
   height: 60px;
 
-  padding-right: 1em;
-  padding-left: 1em;
-
-  transition: background-color 0.5s;
+  transition: background-color 0.5s, border-color 0.5s;
   letter-spacing: 0.1em;
 
   border-width: 2px;
   border-style: solid;
 
   font-size: 1.125rem;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
 }
 
 .btn--light {
@@ -130,23 +140,6 @@ a {
 }
 
 .btn--primary {
-  height: 60px;
-
-  border: 2px solid $color-primary;
+  border-color: $color-primary;
   background-color: rgba($color-primary, 0.8);
-
-  font-size: 1.125rem;
-
-  @include sm-min {
-    min-width: 300px;
-  }
-
-  @include sm {
-    width: 100%;
-  }
-}
-
-.btn:hover,
-.btn:focus {
-  background-color: $color-accent;
 }

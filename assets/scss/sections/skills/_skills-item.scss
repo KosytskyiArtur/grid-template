@@ -5,7 +5,7 @@
 
   &:hover {
     .skill-item__image {
-      transform: scale(1.5);
+      transform: scale(1.1);
     }
 
     .skill-item__link {
@@ -20,7 +20,7 @@
   &__image {
     @include abs-position;
 
-    transition: transform 25s;
+    transition: transform 0.5s;
 
     background-color: $color-primary;
     background-image: url(../img/no-image.png);
@@ -54,12 +54,12 @@
     height: 100%;
     padding: $gap;
 
-    transition: color 0.25s;
+    transition: color 0.5s;
   }
 
   &__overlay {
     @include abs-position;
-    transition: opacity 0.25s;
+    transition: opacity 0.5s;
 
     opacity: 0.8;
     background-color: $color-primary;
